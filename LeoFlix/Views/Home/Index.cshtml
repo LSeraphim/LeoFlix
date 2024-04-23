@@ -1,0 +1,13 @@
+﻿@model List<Movie>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">LeoFlix</h1>
+</div>
+
+@foreach (var movie in Model)
+{
+    <p>@movie.Title - @movie.OriginalTitle</p>
+}
