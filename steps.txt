@@ -35,8 +35,13 @@ dotnet-aspnet-codegenerator controller -name MoviesController -m Movie -dc AppDb
 
 
 dotnet tool install --global dotnet-ef --version 8.0.4
+dotnet tool update --global dotnet-ef --version 8.0.4
+
 
 CODE FIRST: 
 Abrir o NugetGallery (Shift + Ctrl + P):
     - Pesquisar e Instalar:
         Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
+dotnet ef migrations add AdicionandoUsuario
+dotnet ef database update
