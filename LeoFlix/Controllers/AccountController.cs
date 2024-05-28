@@ -23,7 +23,6 @@ public class AccountController : Controller
         _userManager = userManager;
     }
 
-    [HttpGet]
     public IActionResult Login(string returnUrl)
     {
         LoginVM loginVM = new()
@@ -70,6 +69,11 @@ public class AccountController : Controller
             }
         }
         return View(login);
+    }
+
+    public IActionResult Register()
+    {
+        return View();
     }
 
     [HttpPost]
